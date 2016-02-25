@@ -25,12 +25,18 @@ Modify the app.properties file to work in your environment (change streamName an
 vim app.properties
 ```
 
-Set your .bash_profile or .profile in your home directory to have AWS environment variables
+Update the .bash_profile or .profile file in the home directory of the user that will be running the app.  You will add the AWS environment variables that you received from Kuali.
 ```
 vim ~/.bash_profile
 
 export AWS_SECRET_ACCESS_KEY=<secret_key_provided_by_kuali>
 export AWS_ACCESS_KEY_ID=<key_id_provided_by_kuali>
+```
+
+Source the newly updated .bash_profile or .profile, or log out and back in to get the updated environment variables
+
+```
+. ~/.bash_profile
 ```
 
 ## Use
