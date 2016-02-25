@@ -1,0 +1,20 @@
+{
+  "name": "kuali-consumer",
+  "version": "1.0.0",
+  "description": "Consume from a Kuali-provided Kinesis stream and write to log file and database",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/KualiCo/kuali-consumer.git"
+  },
+  "main": "app.js",
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "aws-kcl": "0.5.0",
+    "co": "4.6.0",
+    "co-pg": "1.3.1",
+    "commander": "2.9.0",
+    "log4js": "0.6.31",
+    "pg": "4.4.6"
+  }
+}
