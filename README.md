@@ -20,7 +20,7 @@ Install dependencies
 npm install
 ```
 
-Modify the app.properties file to work in your environment (change streamName and applicationName to the stu-<your_institution>)
+Modify the app.properties file to work in your environment (change streamName and applicationName to the stu-cm-<your_institution>)
 ```
 vim app.properties
 ```
