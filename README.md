@@ -20,7 +20,7 @@ Install dependencies
 npm install
 ```
 
-Modify the app.properties file to work in your environment by changing the streamName and applicationName to stu-cm-<institution_subdomain> (e.g., monsters-tst, byu-stg, coventry)
+Modify the app.properties file to work in your environment by changing the streamName and applicationName to kuali-consumer-nodejs-stu-cm-<institution_subdomain> (e.g., monsters-tst, byu-stg, coventry)
 ```
 vim app.properties
 ```
