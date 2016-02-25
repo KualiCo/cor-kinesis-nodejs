@@ -1,4 +1,4 @@
-# Kinesis Consumer
+# Kuali Consumer
 
 This is a small bit of NodeJS code that consumes messages from an Amazon Kinesis stream provided by Kuali, logs it to a file named application.log (in the root directory), and then parses the message and saves it to a PostgreSQL database.  It is intended that you will change that part of the code to save changes to a database you use or perform some other action when you get messages from Kuali.
 
@@ -12,7 +12,7 @@ You should have Node 4 and Java installed.  You also need to get an AWS Access K
 
 Clone the repo
 ```
-git clone https://github.com/KualiCo/kinesis-consumer.git
+git clone https://github.com/KualiCo/kuali-consumer.git
 ```
 
 Install dependencies
