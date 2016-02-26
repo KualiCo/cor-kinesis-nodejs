@@ -49,6 +49,8 @@ Run by calling the bootstrap script, which will start the java app, which starts
 ```
 With it running, as you make changes in your Kuali application (e.g., Curriculum Management, Kuali Research, etc.), those changes will be logged to the application.log file.  They will also be written to databases and and other actions that you have defined in the code will be performed.
 
+## Message Format
+
 Messages will be in JSON and look similar to those listed below.
 
 When it is an insert, old_val will be null:
@@ -58,27 +60,22 @@ When it is an insert, old_val will be null:
    "0":null,
    "1":{  
       "new_val":{  
-         "action":{  
-            "from":"(empty)",
-            "gKey":"description",
-            "to":"yeah",
-            "type":"changed"
+         "created":1456503966314,
+         "createdBy":"1281228650558160821",
+         "id":"36f7dd5a-05a3-4f27-b9d7-2126e0a8b78e",
+         "meta":{  
+            "proposalType":"create"
          },
-         "client":"unspecified",
-         "id":"30830412-b712-4730-9134-e5f321c15445",
-         "logPath":[  
-            "36f7dd5a-05a3-4f27-b9d7-2126e0a8b78e",
-            "36f7dd5a-05a3-4f27-b9d7-2126e0a8b78e:description"
-         ],
-         "timestamp":1456503980213,
-         "user":"1281228650558160821"
+         "pid":"Eyk6svYil",
+         "status":"draft",
+         "updated":1456503967380
       },
       "old_val":null
    },
    "id":"cc7a4d49-639f-5d95-0f6e-cf03c9880163",
-   "tableName":"logbot",
-   "institution":"uw",
-   "environment":"tst"
+   "tableName":"courses",
+   "institution":"monsters",
+   "environment":"stg"
 }
 ```
 
@@ -112,8 +109,8 @@ When it is an update, old_val and new_val will have a value:
    },
    "id":"a88fc106-c2f3-6b84-805a-e040fecf54a3",
    "tableName":"courses",
-   "institution":"uw",
-   "environment":"tst"
+   "institution":"monsters",
+   "environment":"stg"
 }
 ```
 
@@ -135,7 +132,7 @@ When it is an delete, new_val will be null:
          "pid":"EyBrh8uol",
          "proposalRationale":"this will be a great class",
          "startTerm":{  
-            "year":"2026"
+            "year":"2016"
          },
          "status":"draft",
          "transcriptTitle":"test",
@@ -144,10 +141,18 @@ When it is an delete, new_val will be null:
    },
    "id":"3684bc95-d505-1a07-539d-e29ff1525b94",
    "tableName":"courses",
-   "institution":"uw",
-   "environment":"tst"
+   "institution":"monsters",
+   "environment":"stg"
 }
 ```
+
+Possible tables are:
+- config
+- courses
+- experiences
+- files
+- groups
+- logbot
 
 ## Notes
 
