@@ -6,7 +6,10 @@ Also, the client state information is saved to Amazon DynamoDB, which is necessa
 
 ## Prerequisites
 
-You should have Node 4 and Java installed.  You also need to get an AWS Access Key ID and Secret Access Key from Kuali.  This will have the privileges you need to read from the Kinesis stream, write to DynamoDB to save state information for the client, and push events to CloudWatch (for monitoring).
+- Install git
+- Install NodeJS 4.3 or higher
+- Install Java 1.7 or higher
+- Get an AWS Access Key ID and Secret Access Key from Kuali.  This will have the privileges you need to read from the Kinesis stream, write to DynamoDB to save state information for the client, and push events to CloudWatch (for monitoring).
 
 ## Installation
 
