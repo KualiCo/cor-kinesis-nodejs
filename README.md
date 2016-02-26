@@ -79,7 +79,7 @@ When it is an insert, old_val will be null:
 }
 ```
 
-When it is an update, old_val and new_val will have a value:
+When it is an update, old_val and new_val will not be null:
 
 ```
 {  
@@ -114,7 +114,7 @@ When it is an update, old_val and new_val will have a value:
 }
 ```
 
-When it is an delete, new_val will be null:
+When it is a delete, new_val will be null:
 
 ```
 {  
@@ -146,13 +146,21 @@ When it is an delete, new_val will be null:
 }
 ```
 
-Possible tables are:
+Possible tables for CM are:
+- actionlists
+- actionlogs
 - config
-- courses
+- courses (includes course proposals)
+- definitions
 - experiences
 - files
 - groups
+- instances
 - logbot
+- options
+- pgroups
+- programs (includes program proposals)
+- specializations
 
 ## Notes
 
