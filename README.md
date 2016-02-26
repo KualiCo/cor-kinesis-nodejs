@@ -47,7 +47,7 @@ Run by calling the bootstrap script, which will start the java app, which starts
 ```
 ./bin/kcl-bootstrap --java /usr/bin/java -e -p ./app.properties
 ```
-As it runs, as you make changes to the Kuali environment, it should log those changes to the application.log file, and also write them to databases and take other actions that you have defined in the code.
+With it running, as you make changes in your Kuali application (e.g., Curriculum Management, Kuali Research, etc.), those changes will be logged to the application.log file.  They will also be written to databases and and other actions that you have defined in the code will be performed.
 
 ## Notes
 
