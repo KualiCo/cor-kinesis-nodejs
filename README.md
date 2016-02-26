@@ -33,11 +33,13 @@ export AWS_SECRET_ACCESS_KEY=<secret_key_provided_by_kuali>
 export AWS_ACCESS_KEY_ID=<key_id_provided_by_kuali>
 ```
 
-Source the newly updated .bash_profile or .profile, or log out and back in to get the updated environment variables
+Source the newly updated .bash_profile or .profile, or log out and back in to get the updated environment variables.
 
 ```
 . ~/.bash_profile
 ```
+
+Make changes to the app.js code so it will not only log messages, but also update make changes to databases and take other actions.
 
 ## Use
 
@@ -45,6 +47,7 @@ Run by calling the bootstrap script, which will start the java app, which starts
 ```
 ./bin/kcl-bootstrap --java /usr/bin/java -e -p ./app.properties
 ```
+As it runs, as you make changes to the Kuali environment, it should log those changes to the application.log file, and also write them to databases and take other actions that you have defined in the code.
 
 ## Notes
 
