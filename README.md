@@ -20,7 +20,7 @@ Install dependencies
 npm install
 ```
 
-Modify the app.properties file to work in your environment by changing the streamName to stu-cm-<institution>-<environment> and applicationName to kuali-consumer-stu-cm-<institution>-<environment> where <institution> is the url name of your institution, and <environment> is tst, sbx, stg, or prd (e.g., monsters-tst, byu-stg, coventry).
+Modify the app.properties file to work in your environment by changing the streamName to stu-cm-`<institution>`-`<environment>` and applicationName to kuali-consumer-stu-cm-`<institution>`-`<environment>` where `<institution>` is the url name of your institution, and <environment> is tst, sbx, stg, or prd (e.g., monsters-tst, byu-stg, coventry).
 ```
 vim app.properties
 ```
