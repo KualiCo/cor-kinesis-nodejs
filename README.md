@@ -1,4 +1,4 @@
-# Core Consumer
+# Core Kinesis Consumer
 
 This is sample NodeJS code that consumes messages from an Amazon Kinesis stream provided by Kuali, logs it to a file named application.log (in the root directory), and then parses the message and saves it to a PostgreSQL database.  It is intended that you will change that part of the code to save changes to a database you use or perform some other action when you get messages from Kuali.
 
@@ -15,7 +15,7 @@ Also, the client state information is saved to Amazon DynamoDB, which is necessa
 
 Clone the repo
 ```
-git clone https://github.com/KualiCo/core-consumer-nodejs.git
+git clone https://github.com/KualiCo/core-kinesis-nodejs.git
 ```
 
 Install dependencies
@@ -23,7 +23,7 @@ Install dependencies
 npm install
 ```
 
-Modify the app.properties file to work in your environment by changing the streamName and applicationName to cor-consumer-`<environment>`-stu-cm-`<institution>` where `<institution>` is the url name of your institution (e.g., monsters, byu, coventry, etc.), and <environment> is tst, sbx, stg, or prd.
+Modify the app.properties file to work in your environment by changing the streamName and applicationName to cor-kinesis-`<environment>`-stu-cm-`<institution>` where `<institution>` is the url name of your institution (e.g., monsters, byu, coventry, etc.), and <environment> is tst, sbx, stg, or prd.
 ```
 vim app.properties
 ```
