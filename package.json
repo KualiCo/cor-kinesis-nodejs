@@ -1,10 +1,10 @@
 {
-  "name": "kuali-consumer",
+  "name": "cor-consumer-nodejs",
   "version": "1.0.0",
-  "description": "Consume from a Kuali-provided Kinesis stream and write to log file and database",
+  "description": "This is sample NodeJS code that consumes messages from an Amazon Kinesis stream provided by Kuali, logs it to a file named application.log (in the root directory), and then parses the message and saves it to a PostgreSQL database.",
   "repository": {
     "type": "git",
-    "url": "git://github.com/KualiCo/kuali-consumer.git"
+    "url": "git://github.com/KualiCo/cor-consumer-nodejs.git"
   },
   "main": "app.js",
   "author": "",
