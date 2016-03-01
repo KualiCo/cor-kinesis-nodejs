@@ -23,7 +23,10 @@ Install dependencies
 npm install
 ```
 
-Modify the app.properties file to work in your environment by changing the streamName and applicationName to cor-kinesis-`<environment>`-stu-cm-`<institution>` where `<institution>` is the url name of your institution (e.g., monsters, byu, coventry, etc.), and <environment> is tst, sbx, stg, or prd.
+Modify the app.properties file to work in your environment by changing the streamName and applicationName to cor-kinesis-`<environment>`-`<application>`-`<institution>` where:
+- `<institution>` = url name of your institution - monsters, byu, coventry, etc.
+- `<application>` = abbreviated name of the application - stu-cm, res-coi, etc.
+- `<environment>` = environment of application - tst, sbx, stg, or prd
 ```
 vim app.properties
 ```
