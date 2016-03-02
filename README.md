@@ -23,10 +23,11 @@ Install dependencies
 npm install
 ```
 
-Modify the app.properties file to work in your environment by changing the streamName and applicationName to cor-kinesis-`<environment>`-`<application>`-`<institution>` where:
-- `<institution>` = url name of your institution - monsters, byu, coventry, etc.
-- `<application>` = abbreviated name of the application - stu-cm, res-coi, etc.
+Modify the app.properties file to work in your environment by changing the streamName and applicationName to cor-kinesis-`<region>`-`<environment>`-`<application>`-`<institution>` where:
+- `<region>` = AWS region - saas1 (Oregon), saas2 (Ireland)
 - `<environment>` = environment of application - tst, sbx, stg, or prd
+- `<application>` = abbreviated name of the application - stu-cm, res-coi, etc.
+- `<institution>` = url name of your institution - monsters, byu, coventry, etc.
 ```
 vim app.properties
 ```
