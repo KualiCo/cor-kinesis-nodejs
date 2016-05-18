@@ -158,7 +158,7 @@ Possible tables for CM are:
 cm
 - courses (includes course proposals)
 - experiences
-- logbot (changing Summer 2016)
+- logbot (changing in Summer 2016)
 - options
 - pgroups
 - programs (includes program proposals)
