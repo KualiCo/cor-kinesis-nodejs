@@ -154,20 +154,28 @@ When it is a delete, new_val will be null:
 ```
 
 Possible tables for CM are:
-- actionlists
-- actionlogs
-- config
+
+cm
 - courses (includes course proposals)
-- definitions
 - experiences
-- files
-- groups
-- instances
-- logbot
+- logbot (changing Summer 2016)
 - options
 - pgroups
 - programs (includes program proposals)
 - specializations
+
+workflow (changing in Spring 2016)
+- actionlists
+- actionlogs
+- definitions
+- instances
+
+groups (moved to core)
+- groups
+
+other
+- config
+- files
 
 ## Notes
 
