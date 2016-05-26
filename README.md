@@ -177,6 +177,57 @@ other
 - config
 - files
 
+## Course Lifecycle
+
+This is the lifecycle for courses in Curriculum Management.  Courses and course proposals are all stored in the courses table.  
+
+The lifecycle for a proposed course is draft, review, then rejected or approved.  Then, it becomes a version and is either active or retired.  There can be multiple active ones - it is all just based on start/end term.
+
+Once a proposal is approved, a new course record is created that is the approved course, and then the proposal record is marked active and gets a field “approvedVersionId” that points to the approved record.  Then, the active one can become retired.
+
+Version is just any of the active or retired records - it is calculated on the fly if it is past, active (present), or future.
+
+## Recognizing Events
+
+As you integrate with downstream applications, you may need to recognize certain events.  
+
+### Course Approved Event
+
+So, really all you need to do is look for is when a course status changes and the new status is ‘active’.  You also probably want to make sure oldVal and newVal are not empty first too.
+
+The logic you would insert in the processRecord function is:
+
+```
+if (newVal === null) {
+	//delete
+} else if (oldVal === null) {
+  	//insert
+} else {
+	//update
+ 	if (oldVal.status != newVal.status && newVal.status == ‘active’) {
+		//take some action like save to database or call Banner API using newVal payload
+	}
+}
+```
+
+### Course Edit After Approval
+
+```
+if (newVal.status == ‘active’) {
+	//take some action like save to database or call Banner API using newVal payload
+}
+```
+
+### Propose Changes After Approval
+
+This is a bit different, when someone proposes changes (hits the Propose Changes button).  In this case, it creates a new record that references the old one
+
+```
+if (newVal.status == ‘active’ && newVal.proposedFromId) {
+	//take some action like save to database or call Banner API using newVal payload
+}
+```
+
 ## Notes
 
 Be careful not to use the 'stderr'/'stdout'/'console' as log destination since it is used to communicate with the
