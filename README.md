@@ -183,7 +183,7 @@ This is the lifecycle for courses in Curriculum Management.  Courses and course 
 
 The lifecycle for a proposed course is draft, review, then rejected or approved.  Then, it becomes a version and is either active or retired.  There can be multiple active ones - it is all just based on start/end term.
 
-Once a proposal is approved, a new course record is created that is the approved course, and then the proposal record is marked active and gets a field “approvedVersionId” that points to the approved record.  Then, the active one can become retired.
+Once a proposal is approved, a new course record is created that is the approved course, and then the proposal record is marked active and gets a field “approvedVersionId” that points to the approved record.  Also, the version gets a field named "originalProposal" that has the ID of the proposal record.  Then, the active one can become retired.
 
 Version is just any of the active or retired records - it is calculated on the fly if it is past, active (present), or future.
 
