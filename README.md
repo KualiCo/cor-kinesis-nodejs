@@ -193,7 +193,7 @@ As you integrate with downstream applications, you may need to recognize certain
 
 ### Course Approved Event
 
-So, really all you need to do is look for is when a course status changes and the new status is ‘active’.  You also probably want to make sure oldVal and newVal are not empty first too.
+So, really all you need to look for is when a course status changes and the new status is ‘active’.  You also probably want to make sure oldVal and newVal are not empty first too.
 
 The logic you would insert in the processRecord function is:
 
